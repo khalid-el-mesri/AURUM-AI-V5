@@ -1,0 +1,16 @@
+{
+  "project": "AURUM-AI",
+  "model": "CNN1D 30m Classifier",
+  "baseline": "DOWN",
+  "evaluation_split": "validation",
+  "total_windows": 13337,
+  "trading_days": 311,
+  "cnn_accuracy": 0.3757216765389518,
+  "baseline_accuracy": 0.3493289345430007,
+  "accuracy_difference_pp": 2.6392741995951097,
+  "cnn_better_days": 170,
+  "baseline_better_days": 121,
+  "equal_days": 20,
+  "test_dataset_used": false,
+  "note": "Exploratory validation analysis. Not an independent out-of-sample test. Overlapping forecast horizons may create temporal dependence."
+}

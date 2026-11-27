@@ -1,0 +1,81 @@
+{
+  "model": "TCN",
+  "evaluation_split": "validation",
+  "device": "cpu",
+  "target": "next_5min_log_return",
+  "window_size": 20,
+  "feature_names": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "channels": 16,
+  "best_epoch": 6,
+  "validation_metrics": {
+    "MAE": 0.0007244236185215414,
+    "RMSE": 0.0009735830244608223
+  },
+  "zero_return_validation": {
+    "MAE": 0.0007242192514240742,
+    "RMSE": 0.0009727177093736827
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5328955104500014,
+      "validation_mae": 0.000724794729007767,
+      "validation_rmse": 0.0009728304415643771
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5302421776675691,
+      "validation_mae": 0.0007259132474900334,
+      "validation_rmse": 0.0009737542327366328
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5299407847037536,
+      "validation_mae": 0.0007249618467160302,
+      "validation_rmse": 0.0009729598360392488
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5294000823407452,
+      "validation_mae": 0.0007246092272517991,
+      "validation_rmse": 0.0009730541931929612
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5291809667508808,
+      "validation_mae": 0.0007257632647834177,
+      "validation_rmse": 0.0009738027549122743
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5288716528241036,
+      "validation_mae": 0.0007244235838465276,
+      "validation_rmse": 0.0009735830517403938
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.528663350977648,
+      "validation_mae": 0.0007263329680930425,
+      "validation_rmse": 0.0009741012821704954
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5281199366175172,
+      "validation_mae": 0.0007251484649624027,
+      "validation_rmse": 0.0009740463447760528
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.5276089685002545,
+      "validation_mae": 0.000725303967872987,
+      "validation_rmse": 0.0009741999881435873
+    }
+  ]
+}

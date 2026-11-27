@@ -1,0 +1,56 @@
+{
+  "project": "AURUM-AI",
+  "stage": "B.15.7",
+  "dataset": "XOM",
+  "model": "CNN1D",
+  "horizon_minutes": 60,
+  "split": "validation",
+  "validation_samples": 11471,
+  "valid_execution_windows": 11160,
+  "excluded_execution_windows": 311,
+  "validation_mae": 0.002315057386852686,
+  "validation_rmse": 0.0030779563443711707,
+  "cost_bps_per_side": 10.0,
+  "threshold_results": [
+    {
+      "threshold_log_return": 0.0,
+      "signals": 9550,
+      "average_gross_pct": 0.001044533642563124,
+      "average_net_pct": -0.19875775313793054,
+      "profitable_pct": 21.717277486910994
+    },
+    {
+      "threshold_log_return": 0.001,
+      "signals": 0,
+      "average_gross_pct": null,
+      "average_net_pct": null,
+      "profitable_pct": null
+    },
+    {
+      "threshold_log_return": 0.002,
+      "signals": 0,
+      "average_gross_pct": null,
+      "average_net_pct": null,
+      "profitable_pct": null
+    },
+    {
+      "threshold_log_return": 0.003,
+      "signals": 0,
+      "average_gross_pct": null,
+      "average_net_pct": null,
+      "profitable_pct": null
+    }
+  ],
+  "real_trading": false,
+  "test_dataset_used": false,
+  "limitations": [
+    "Exploratory validation analysis.",
+    "Overlapping investment signals.",
+    "Not a sequential portfolio backtest.",
+    "No position sizing or portfolio risk rules.",
+    "Returns depend on idealized Bid open fills.",
+    "Transaction costs are hypothetical.",
+    "Predicted signal-to-target log return is not identical to delayed-entry realized return.",
+    "Threshold results are not independent out-of-sample evidence."
+  ]
+}

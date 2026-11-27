@@ -1,0 +1,52 @@
+{
+  "project": "AURUM-AI",
+  "model": "CNN1D",
+  "forecast_horizon_minutes": 30,
+  "evaluation_split": "validation",
+  "target": "next_30min_log_return",
+  "train_samples": 61937,
+  "validation_samples": 13337,
+  "best_epoch": 2,
+  "cnn1d_validation": {
+    "MAE": 0.0016823612930103387,
+    "RMSE": 0.0022522374094920976
+  },
+  "zero_return_validation": {
+    "MAE": 0.0016833154390005494,
+    "RMSE": 0.002254577559477485
+  },
+  "mae_improvement_pct": 0.05668254256475909,
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.6391630443802296,
+      "validation_mae": 0.0016830385962757616,
+      "validation_rmse": 0.0022527295818602685
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.638673854814993,
+      "validation_mae": 0.0016823612930103387,
+      "validation_rmse": 0.0022522374094920976
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.6383121939646386,
+      "validation_mae": 0.001683046684670203,
+      "validation_rmse": 0.0022533592620092966
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.6379139058084167,
+      "validation_mae": 0.0016829843184883095,
+      "validation_rmse": 0.002252659162037267
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.6373243580058972,
+      "validation_mae": 0.0016832334665103951,
+      "validation_rmse": 0.0022539803033567412
+    }
+  ],
+  "test_dataset_used": false
+}

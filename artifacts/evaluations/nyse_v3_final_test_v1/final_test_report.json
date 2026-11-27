@@ -1,0 +1,87 @@
+{
+  "project": "AURUM-AI V5",
+  "protocol": "Preselected validation winners; held-out NYSE V3 test",
+  "selection": [
+    {
+      "model": "cnn1d",
+      "horizon_minutes": 5
+    },
+    {
+      "model": "cnn1d",
+      "horizon_minutes": 15
+    },
+    {
+      "model": "cnn1d",
+      "horizon_minutes": 30
+    },
+    {
+      "model": "lstm",
+      "horizon_minutes": 60
+    }
+  ],
+  "test_first_session": "2024-11-15",
+  "test_last_session": "2026-09-30",
+  "test_session_count": 311,
+  "source_sha256": "aef7c58cd1c26538a41155d0f848f408beb8fb45813048bd2e3d2c6831f0a162",
+  "scaler_sha256": "f30cef090f9753fada696d0899adca5993ebccf2d04d728f0b8e62f80d91a8da",
+  "evaluated_at_utc": "2026-11-18T16:15:50.989976+00:00",
+  "no_retraining": true,
+  "results": [
+    {
+      "model": "CNN1D",
+      "horizon_minutes": 5,
+      "run_id": "cnn1d_5m_seed42",
+      "samples": 14784,
+      "test_MAE": 0.0007530153218660937,
+      "test_RMSE": 0.001089189560409531,
+      "zero_return_MAE": 0.000752926510054002,
+      "zero_return_RMSE": 0.0010886906513328447,
+      "mae_gain_pct": -0.011795548556967614,
+      "rmse_gain_pct": -0.04582652345508458,
+      "checkpoint_sha256": "ac90bf2282496c5cbe9a531747b91bcf8c220a6b698d1c9263358428edd92dcf",
+      "checkpoint_best_epoch": 6
+    },
+    {
+      "model": "CNN1D",
+      "horizon_minutes": 15,
+      "run_id": "cnn1d_15m_seed42",
+      "samples": 14162,
+      "test_MAE": 0.0012760678682388717,
+      "test_RMSE": 0.0018496989902993916,
+      "zero_return_MAE": 0.0012753214584225697,
+      "zero_return_RMSE": 0.0018453113629336682,
+      "mae_gain_pct": -0.05852719025250699,
+      "rmse_gain_pct": -0.23777165490099023,
+      "checkpoint_sha256": "8179bb36998d14fd9b3773d18bd3b8fa6335b3a20946fff0efb401faeb9fd7e2",
+      "checkpoint_best_epoch": 9
+    },
+    {
+      "model": "CNN1D",
+      "horizon_minutes": 30,
+      "run_id": "cnn1d_30m_seed42",
+      "samples": 13229,
+      "test_MAE": 0.0017962496259217703,
+      "test_RMSE": 0.0026358488534584195,
+      "zero_return_MAE": 0.0017862005734252339,
+      "zero_return_RMSE": 0.0025991283973557646,
+      "mae_gain_pct": -0.5625937336514399,
+      "rmse_gain_pct": -1.4127988497995163,
+      "checkpoint_sha256": "c230cd8807b861f61aa8b2a03f75c3cd80b2eeb633a6472582db3f6495bd2a0a",
+      "checkpoint_best_epoch": 10
+    },
+    {
+      "model": "LSTM",
+      "horizon_minutes": 60,
+      "run_id": "lstm_60m_seed42",
+      "samples": 11363,
+      "test_MAE": 0.002498811082284386,
+      "test_RMSE": 0.003728500862127834,
+      "zero_return_MAE": 0.0024870467811602135,
+      "zero_return_RMSE": 0.003684915116088479,
+      "mae_gain_pct": -0.47302291268861624,
+      "rmse_gain_pct": -1.1828154697256907,
+      "checkpoint_sha256": "4d149f937aa80c9e3eb90bc214f898843eb230f804488cd9e8047cd027464556",
+      "checkpoint_best_epoch": 8
+    }
+  ]
+}

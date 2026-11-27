@@ -1,0 +1,47 @@
+{
+  "input_rows": 161001,
+  "output_rows": 161001,
+  "segments": 2072,
+  "session_dates": 2072,
+  "first_timestamp_ms": 1485441000000,
+  "last_timestamp_ms": 1790798100000,
+  "feature_columns": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "sma_5",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance",
+    "ema_10"
+  ],
+  "model_feature_columns": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "missing_by_feature": {
+    "return_1": 2072,
+    "range_pct": 0,
+    "body_pct": 0,
+    "sma_5": 8288,
+    "log_return_1": 2072,
+    "volatility_10": 20720,
+    "sma_5_distance": 8288,
+    "ema_10": 0
+  },
+  "timestamp_semantics": "candle OPEN in UTC milliseconds",
+  "feature_available_at_ms_rule": "timestamp + 300000 (candle END)",
+  "causal_rule": "all rolling/EMA/return calculations use current and preceding bars within each segment only",
+  "scaler_retrained": false,
+  "model_retrained": false,
+  "windows_rebuilt": false,
+  "test_npz_opened": false,
+  "source_path": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\02_clean\\xom_segmented_nyse_v3.parquet",
+  "source_sha256": "e445767e63ea87b679c0213f93d867fdee453c1108177201c526b477d40d5758",
+  "output_path": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\03_features\\xom_features_nyse_v3.parquet",
+  "output_sha256": "aef7c58cd1c26538a41155d0f848f408beb8fb45813048bd2e3d2c6831f0a162"
+}

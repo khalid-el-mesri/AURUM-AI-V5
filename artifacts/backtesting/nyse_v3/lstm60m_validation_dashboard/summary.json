@@ -1,0 +1,21 @@
+{
+    "project": "AURUM-AI",
+    "dataset": "XOM NYSE V3",
+    "split": "validation",
+    "model": "LSTM",
+    "horizon_minutes": 60,
+    "initial_capital_usd": 10000.0,
+    "final_capital_usd": 10008.876261318175,
+    "net_pnl_usd": 8.876261318175239,
+    "return_pct": 0.08876261318175238,
+    "maximum_drawdown_pct": 0.033747881082888675,
+    "market_bars": 24222,
+    "signals": 20,
+    "trades_closed": 5,
+    "winning_trades": 4,
+    "win_rate_pct": 80.0,
+    "risk_halted": false,
+    "cost_bps_per_side": 10.0,
+    "execution_price": "historical Bid open",
+    "simulation_only": true
+}

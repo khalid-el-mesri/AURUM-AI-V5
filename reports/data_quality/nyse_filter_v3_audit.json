@@ -1,0 +1,16 @@
+{
+  "source": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\01_raw\\xomususd-m5-bid-2017-01-26-2026-10-01.csv",
+  "output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\02_clean\\xom_regular_session_nyse_v3.csv",
+  "policy": "NYSE official schedule; entire bar within session",
+  "raw_rows": 504763,
+  "selected_rows": 161001,
+  "excluded_old_rth_rows": 22,
+  "excluded_by_date": {
+    "2019-07-03": 21,
+    "2019-11-29": 1
+  },
+  "test_split_npz_opened": false,
+  "raw_includes_all_historical_periods": true,
+  "raw_modified": false,
+  "downstream_pipeline_regenerated": false
+}

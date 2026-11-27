@@ -1,0 +1,83 @@
+{
+  "project": "AURUM-AI",
+  "method": "Reuse normalized 5-minute input windows",
+  "splits": {
+    "train": {
+      "15": {
+        "total_original_windows": 69187,
+        "valid_windows": 66287,
+        "excluded_windows": 2900,
+        "X_shape": [
+          66287,
+          20,
+          6
+        ],
+        "target": "next_15min_log_return",
+        "file": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\train_15m_normalized.npz"
+      },
+      "30": {
+        "total_original_windows": 69187,
+        "valid_windows": 61937,
+        "excluded_windows": 7250,
+        "X_shape": [
+          61937,
+          20,
+          6
+        ],
+        "target": "next_30min_log_return",
+        "file": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\train_30m_normalized.npz"
+      },
+      "60": {
+        "total_original_windows": 69187,
+        "valid_windows": 53237,
+        "excluded_windows": 15950,
+        "X_shape": [
+          53237,
+          20,
+          6
+        ],
+        "target": "next_60min_log_return",
+        "file": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\train_60m_normalized.npz"
+      }
+    },
+    "validation": {
+      "15": {
+        "total_original_windows": 14892,
+        "valid_windows": 14270,
+        "excluded_windows": 622,
+        "X_shape": [
+          14270,
+          20,
+          6
+        ],
+        "target": "next_15min_log_return",
+        "file": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\validation_15m_normalized.npz"
+      },
+      "30": {
+        "total_original_windows": 14892,
+        "valid_windows": 13337,
+        "excluded_windows": 1555,
+        "X_shape": [
+          13337,
+          20,
+          6
+        ],
+        "target": "next_30min_log_return",
+        "file": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\validation_30m_normalized.npz"
+      },
+      "60": {
+        "total_original_windows": 14892,
+        "valid_windows": 11471,
+        "excluded_windows": 3421,
+        "X_shape": [
+          11471,
+          20,
+          6
+        ],
+        "target": "next_60min_log_return",
+        "file": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\validation_60m_normalized.npz"
+      }
+    }
+  },
+  "test_dataset_used": false
+}

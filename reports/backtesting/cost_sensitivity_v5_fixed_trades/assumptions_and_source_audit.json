@@ -1,0 +1,55 @@
+{
+  "project": "AURUM-AI",
+  "analysis": "E.4 V5 frozen-trade cost and slippage sensitivity",
+  "source_split": "validation",
+  "source_report": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\reports\\backtesting\\combined_holding_30m_60m_v5_calendar\\comparison_summary_v5.json",
+  "sha256": {
+    "comparison_summary_v5.json": "cb345abc6a33aca707511a7ac3c73b29ac0ecf5d0965b6e6dfe085063304802e",
+    "30m_transactions_v5.csv": "b16dc05b196fa273f077c6bd4ac413f8fe092c2a598adcd1048f56d2707e3e05",
+    "60m_transactions_v5.csv": "7b635f6804785188c4503e2e757fda38b3f7947a0ae22715d6c55c15296a096c"
+  },
+  "source_audit": {
+    "30m": {
+      "trades": 94,
+      "reference_total_fees": 93.53762196406518,
+      "reference_final_equity": 9915.439207008083
+    },
+    "60m": {
+      "trades": 90,
+      "reference_total_fees": 89.623295182374,
+      "reference_final_equity": 9930.648655146328
+    }
+  },
+  "initial_capital_usd": 10000.0,
+  "historical_price": "XOMUSUSD 5m Bid open",
+  "baseline_fee_bps_per_side": 10.0,
+  "scenarios_fee_bps_per_side": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "scenarios_adverse_slippage_bps_per_side": [
+    0.0,
+    2.0,
+    5.0,
+    10.0
+  ],
+  "recomputed_trades": false,
+  "recomputed_risk": false,
+  "recomputed_positions": false,
+  "test_dataset_used": false,
+  "real_orders": false,
+  "limitations": [
+    "FIXED executed trades and quantities from V5; no re-optimization, position resizing or agent/risk recomputation.",
+    "Hypothetical per-side fees and adverse price slippage; original Bid-only data contain no Ask or true spread.",
+    "Synthetic capital outcomes are accounting sensitivity, NOT results of a fresh backtest.",
+    "Fixed quantities may become infeasible if changed costs exhaust available cash; see scenario flag.",
+    "Risk/kill-switch timestamps, entry counts and position sizes can change under a true strategy rerun.",
+    "Additional intrabar slippage, market impact, queue priority and live market fills are unknown.",
+    "Validation was previously used for strategy selection; not independent out-of-sample evidence."
+  ]
+}

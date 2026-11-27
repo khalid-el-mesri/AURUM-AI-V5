@@ -1,0 +1,56 @@
+{
+  "project": "AURUM-AI",
+  "task": "30m three-class forecasting",
+  "classes": [
+    "DOWN",
+    "NEUTRAL",
+    "UP"
+  ],
+  "threshold_source": "train_only",
+  "neutral_quantile": 0.3,
+  "threshold_log_return": 0.0007234920165501535,
+  "splits": {
+    "train": {
+      "windows": 61937,
+      "distribution": {
+        "DOWN": {
+          "count": 21816,
+          "percentage": 35.222887773059725
+        },
+        "NEUTRAL": {
+          "count": 18581,
+          "percentage": 29.999838545618935
+        },
+        "UP": {
+          "count": 21540,
+          "percentage": 34.77727368132134
+        }
+      },
+      "file": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\train_30m_classification.npz"
+    },
+    "validation": {
+      "windows": 13337,
+      "distribution": {
+        "DOWN": {
+          "count": 4659,
+          "percentage": 34.93289345430007
+        },
+        "NEUTRAL": {
+          "count": 3923,
+          "percentage": 29.414411036964832
+        },
+        "UP": {
+          "count": 4755,
+          "percentage": 35.6526955087351
+        }
+      },
+      "file": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\validation_30m_classification.npz"
+    }
+  },
+  "test_dataset_used": false,
+  "majority_baseline": {
+    "selected_from": "train",
+    "class": "DOWN",
+    "validation_accuracy_pct": 34.93289345430007
+  }
+}

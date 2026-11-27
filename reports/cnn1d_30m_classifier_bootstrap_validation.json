@@ -1,0 +1,30 @@
+{
+  "project": "AURUM-AI",
+  "model": "CNN1D 30m Classifier",
+  "baseline": "Train-majority DOWN",
+  "evaluation_split": "validation",
+  "method": "Moving Block Bootstrap",
+  "metric": "accuracy_difference_pp",
+  "trading_days": 311,
+  "total_windows": 13337,
+  "block_size": 10,
+  "bootstrap_repetitions": 3000,
+  "seed": 42,
+  "confidence_level": 95,
+  "observed_improvement_pp": 2.6392741995951097,
+  "confidence_interval_pp": [
+    0.15649021092555604,
+    4.8348340126696785
+  ],
+  "ci_includes_zero": false,
+  "bootstrap_positive_percentage": 97.96666666666667,
+  "conclusion": "Positive improvement in the exploratory bootstrap; independent testing still needed.",
+  "limitations": [
+    "Model selected using the same validation period.",
+    "Overlapping 30-minute forecasts are dependent.",
+    "Block length is an exploratory choice.",
+    "Interval is not a formal post-selection test.",
+    "No trading profitability has been measured."
+  ],
+  "test_dataset_used": false
+}

@@ -1,0 +1,120 @@
+{
+  "model": "LSTM",
+  "horizon_minutes": 30,
+  "run_id": "lstm_30m_seed42",
+  "train_samples": 61915,
+  "validation_samples": 13337,
+  "window_shape": [
+    20,
+    6
+  ],
+  "features": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "zero_return_validation": {
+    "MAE": 0.0016833154390005494,
+    "RMSE": 0.002254577559477485
+  },
+  "test_dataset_used": false,
+  "status": "COMPLETED",
+  "best_epoch": 10,
+  "validation_metrics_selected_on_validation": {
+    "MAE": 0.0016795882148245814,
+    "RMSE": 0.0022514516953850506
+  },
+  "selection_metric": "minimum validation MAE across epochs",
+  "evaluation_note": "Validation selected epoch; not an unbiased final Test estimate.",
+  "mae_improvement_vs_zero_pct": 0.22142161175572436,
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss_scaled": 1.6395068063380154,
+      "validation_MAE": 0.0016827865283031397,
+      "validation_RMSE": 0.0022534925339336956
+    },
+    {
+      "epoch": 2,
+      "train_loss_scaled": 1.638885727142812,
+      "validation_MAE": 0.001682689941923254,
+      "validation_RMSE": 0.002252807810829086
+    },
+    {
+      "epoch": 3,
+      "train_loss_scaled": 1.6377958073154324,
+      "validation_MAE": 0.0016818825862638129,
+      "validation_RMSE": 0.0022523349046599315
+    },
+    {
+      "epoch": 4,
+      "train_loss_scaled": 1.6362443053124553,
+      "validation_MAE": 0.0016815959791161843,
+      "validation_RMSE": 0.0022519443790547065
+    },
+    {
+      "epoch": 5,
+      "train_loss_scaled": 1.6351227384001357,
+      "validation_MAE": 0.001681156097085437,
+      "validation_RMSE": 0.002251694122043485
+    },
+    {
+      "epoch": 6,
+      "train_loss_scaled": 1.6323269277746069,
+      "validation_MAE": 0.001680190467266236,
+      "validation_RMSE": 0.0022511026888303366
+    },
+    {
+      "epoch": 7,
+      "train_loss_scaled": 1.628990064444762,
+      "validation_MAE": 0.0016815753405099764,
+      "validation_RMSE": 0.0022543300475684333
+    },
+    {
+      "epoch": 8,
+      "train_loss_scaled": 1.6269665568304073,
+      "validation_MAE": 0.001681523681215091,
+      "validation_RMSE": 0.0022553217444198194
+    },
+    {
+      "epoch": 9,
+      "train_loss_scaled": 1.6229338378674436,
+      "validation_MAE": 0.001680103822541646,
+      "validation_RMSE": 0.002251928068698264
+    },
+    {
+      "epoch": 10,
+      "train_loss_scaled": 1.6183095925017743,
+      "validation_MAE": 0.0016795882148245814,
+      "validation_RMSE": 0.0022514516953850506
+    }
+  ],
+  "hyperparameters": {
+    "batch_size": 256,
+    "max_epochs": 10,
+    "patience": 3,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "target_scale": 1000.0,
+    "hidden_or_conv_channels": 32,
+    "seed": 42,
+    "gradient_clip_norm": 1.0,
+    "loss": "SmoothL1Loss"
+  },
+  "dataset": {
+    "name": "NYSE V3",
+    "normalization": "Train 5m z-score, reused across horizons",
+    "train_npz_sha256": "6c2f02ea4aa104107f006ed73321ebfc013a0cd7b6a4397ad4395863b05d17c1",
+    "validation_npz_sha256": "3486b66bec627552470adf8b5e67d92ed0e3f7cda86e41342fde22f836f058da",
+    "normalization_stats_sha256": "f30cef090f9753fada696d0899adca5993ebccf2d04d728f0b8e62f80d91a8da"
+  },
+  "framework": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.4.6",
+    "device": "cpu"
+  },
+  "completed_at_utc": "2026-10-16T12:56:42.251509+00:00"
+}

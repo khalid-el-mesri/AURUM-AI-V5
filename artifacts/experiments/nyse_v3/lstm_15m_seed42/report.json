@@ -1,0 +1,84 @@
+{
+  "model": "LSTM",
+  "horizon_minutes": 15,
+  "run_id": "lstm_15m_seed42",
+  "train_samples": 66265,
+  "validation_samples": 14270,
+  "window_shape": [
+    20,
+    6
+  ],
+  "features": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "zero_return_validation": {
+    "MAE": 0.0012210667330594136,
+    "RMSE": 0.001636678097504534
+  },
+  "test_dataset_used": false,
+  "status": "COMPLETED",
+  "best_epoch": 1,
+  "validation_metrics_selected_on_validation": {
+    "MAE": 0.0012212206390458612,
+    "RMSE": 0.0016366822410250044
+  },
+  "selection_metric": "minimum validation MAE across epochs",
+  "evaluation_note": "Validation selected epoch; not an unbiased final Test estimate.",
+  "mae_improvement_vs_zero_pct": -0.01260422401829389,
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss_scaled": 1.0822701560122412,
+      "validation_MAE": 0.0012212206390458612,
+      "validation_RMSE": 0.0016366822410250044
+    },
+    {
+      "epoch": 2,
+      "train_loss_scaled": 1.081686330885021,
+      "validation_MAE": 0.0012213952526789933,
+      "validation_RMSE": 0.0016364948223191542
+    },
+    {
+      "epoch": 3,
+      "train_loss_scaled": 1.0813751500156397,
+      "validation_MAE": 0.0012216738624837222,
+      "validation_RMSE": 0.001636868673668036
+    },
+    {
+      "epoch": 4,
+      "train_loss_scaled": 1.081326900830604,
+      "validation_MAE": 0.00122149897649241,
+      "validation_RMSE": 0.0016365997351671894
+    }
+  ],
+  "hyperparameters": {
+    "batch_size": 256,
+    "max_epochs": 10,
+    "patience": 3,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "target_scale": 1000.0,
+    "hidden_or_conv_channels": 32,
+    "seed": 42,
+    "gradient_clip_norm": 1.0,
+    "loss": "SmoothL1Loss"
+  },
+  "dataset": {
+    "name": "NYSE V3",
+    "normalization": "Train 5m z-score, reused across horizons",
+    "train_npz_sha256": "7e5360e69268db2beb1886f64ac0931ad30305ae1a77831154d6d353a53d9998",
+    "validation_npz_sha256": "2cd7af61aa7ce55cddd987290daf63578b6a6b1143bda8671f06d43e6f007cde",
+    "normalization_stats_sha256": "f30cef090f9753fada696d0899adca5993ebccf2d04d728f0b8e62f80d91a8da"
+  },
+  "framework": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.4.6",
+    "device": "cpu"
+  },
+  "completed_at_utc": "2026-10-16T12:51:59.902096+00:00"
+}

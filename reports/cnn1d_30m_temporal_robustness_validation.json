@@ -1,0 +1,70 @@
+{
+  "project": "AURUM-AI",
+  "model": "CNN1D Classifier 30m",
+  "baseline": "Train-majority DOWN",
+  "evaluation_split": "validation",
+  "analysis": "Chronological four-period comparison",
+  "positive_periods": 4,
+  "total_periods": 4,
+  "overall_improvement_pp": 2.6392741995951123,
+  "periods": [
+    {
+      "period": 1,
+      "first_date": "2022-11-30",
+      "last_date": "2023-10-02",
+      "trading_days": 78,
+      "windows": 3354,
+      "cnn_accuracy_pct": 39.803220035778175,
+      "baseline_accuracy_pct": 38.46153846153846,
+      "difference_pp": 1.3416815742397148,
+      "cnn_better_days": 42,
+      "baseline_better_days": 32,
+      "equal_days": 4
+    },
+    {
+      "period": 2,
+      "first_date": "2023-10-05",
+      "last_date": "2024-03-25",
+      "trading_days": 78,
+      "windows": 3354,
+      "cnn_accuracy_pct": 36.881335718545024,
+      "baseline_accuracy_pct": 33.631484794275494,
+      "difference_pp": 3.2498509242695306,
+      "cnn_better_days": 43,
+      "baseline_better_days": 32,
+      "equal_days": 3
+    },
+    {
+      "period": 3,
+      "first_date": "2024-03-26",
+      "last_date": "2024-07-24",
+      "trading_days": 78,
+      "windows": 3318,
+      "cnn_accuracy_pct": 36.04581072935503,
+      "baseline_accuracy_pct": 34.719710669077756,
+      "difference_pp": 1.3261000602772768,
+      "cnn_better_days": 40,
+      "baseline_better_days": 32,
+      "equal_days": 6
+    },
+    {
+      "period": 4,
+      "first_date": "2024-07-25",
+      "last_date": "2024-11-14",
+      "trading_days": 77,
+      "windows": 3311,
+      "cnn_accuracy_pct": 37.541528239202655,
+      "baseline_accuracy_pct": 32.89036544850498,
+      "difference_pp": 4.651162790697676,
+      "cnn_better_days": 45,
+      "baseline_better_days": 25,
+      "equal_days": 7
+    }
+  ],
+  "test_dataset_used": false,
+  "limitations": [
+    "Model and horizon selected on validation.",
+    "Overlapping forecasts create dependence.",
+    "Not an independent out-of-sample test."
+  ]
+}

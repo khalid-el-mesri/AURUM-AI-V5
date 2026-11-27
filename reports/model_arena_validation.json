@@ -1,0 +1,73 @@
+{
+  "project": "AURUM-AI",
+  "comparison": "AI Model Arena",
+  "evaluation_split": "validation",
+  "target": "next_5min_log_return",
+  "ranking_metric": "MAE",
+  "models_compared": 10,
+  "best_mae_model": "CNN1D",
+  "best_rmse_model": "CNN1D",
+  "results": [
+    {
+      "model": "CNN1D",
+      "MAE": 0.0007242140709422529,
+      "RMSE": 0.0009725647978484631,
+      "rank": 1
+    },
+    {
+      "model": "Zero Return",
+      "MAE": 0.0007242192589361388,
+      "RMSE": 0.0009727177482458079,
+      "rank": 2
+    },
+    {
+      "model": "LSTM",
+      "MAE": 0.0007243843273550791,
+      "RMSE": 0.0009727090143427105,
+      "rank": 3
+    },
+    {
+      "model": "Transformer",
+      "MAE": 0.000724395483294491,
+      "RMSE": 0.000972904707693219,
+      "rank": 4
+    },
+    {
+      "model": "GRU",
+      "MAE": 0.0007244206499308348,
+      "RMSE": 0.0009727849392220378,
+      "rank": 5
+    },
+    {
+      "model": "TCN",
+      "MAE": 0.0007244236185215414,
+      "RMSE": 0.0009735830244608223,
+      "rank": 6
+    },
+    {
+      "model": "XGBoost",
+      "MAE": 0.0007244399005618817,
+      "RMSE": 0.0009725741732130759,
+      "rank": 7
+    },
+    {
+      "model": "Historical Mean",
+      "MAE": 0.0007245261222026892,
+      "RMSE": 0.000972721843781319,
+      "rank": 8
+    },
+    {
+      "model": "Ridge",
+      "MAE": 0.0007259496487677097,
+      "RMSE": 0.0009743490372784436,
+      "rank": 9
+    },
+    {
+      "model": "Last Return",
+      "MAE": 0.0010287740850566174,
+      "RMSE": 0.0013751755181751041,
+      "rank": 10
+    }
+  ],
+  "test_dataset_used": false
+}

@@ -1,0 +1,34 @@
+{
+  "project": "AURUM-AI",
+  "stage": "C.4.2",
+  "asset": "XOMUSD",
+  "source_split": "validation",
+  "strategy": "Consensus + Trend 60m",
+  "decision_count": 222,
+  "transaction_count": 180,
+  "executed_buy_count": 90,
+  "executed_sell_count": 90,
+  "other_decision_count": 42,
+  "block_count_including_genesis": 223,
+  "blockchain_integrity_verified": true,
+  "json_reload_verified": true,
+  "final_block_hash": "380b4c09c216c5b1ec92dc8b4405ce8a5e268731dce2779b80fde201e708254e",
+  "backtest_final_equity_usd": 9930.648655146328,
+  "source_file_sha256": {
+    "decisions": "780ff2cfb3c6cb8c4d93ee633604eba98f91de8ad0de5da68c4eaeda9dead13b",
+    "transactions": "7b635f6804785188c4503e2e757fda38b3f7947a0ae22715d6c55c15296a096c",
+    "summary": "c8a2ae410b04277d104834228d6c145f528276da64a0f6ee9d8e84a93093128f"
+  },
+  "historical_timestamp_source": "timestamp_ms",
+  "processing_risk_timestamp_excluded": true,
+  "test_dataset_used": false,
+  "real_trading": false,
+  "limitations": [
+    "Local SHA-256 linked audit ledger.",
+    "Reconstructed from historical CSV files.",
+    "Not live event-stream recording.",
+    "No distributed consensus mechanism.",
+    "No external immutable hash anchor.",
+    "A fully rewritten chain cannot be detected by internal hashing alone."
+  ]
+}

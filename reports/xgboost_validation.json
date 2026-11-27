@@ -1,0 +1,29 @@
+{
+  "model": "XGBoost",
+  "evaluation_split": "validation",
+  "target": "next_5min_log_return",
+  "window_size": 20,
+  "features_per_sample": 120,
+  "feature_names": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "best_iteration": 62,
+  "train_metrics": {
+    "MAE": 0.0008736144728008278,
+    "RMSE": 0.0013855675959252897
+  },
+  "validation_metrics": {
+    "MAE": 0.0007244399005618817,
+    "RMSE": 0.0009725741732130759
+  },
+  "zero_return_validation": {
+    "MAE": 0.0007242192589361388,
+    "RMSE": 0.0009727177482458079
+  },
+  "model_path": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\artifacts\\models\\xgboost_model.json"
+}

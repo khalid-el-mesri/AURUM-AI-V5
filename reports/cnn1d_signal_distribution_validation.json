@@ -1,0 +1,35 @@
+{
+  "project": "AURUM-AI",
+  "model": "CNN1D",
+  "evaluation_split": "validation",
+  "total_windows": 14892,
+  "prediction_percentiles": {
+    "50": 3.820926849584794e-06,
+    "90": 1.113842890845262e-05,
+    "95": 1.7237476185982794e-05,
+    "99": 3.495905581075931e-05
+  },
+  "threshold_analysis": [
+    {
+      "threshold_log_return": 0.0001,
+      "BUY": 0,
+      "SELL": 2,
+      "HOLD": 14890
+    },
+    {
+      "threshold_log_return": 0.0003,
+      "BUY": 0,
+      "SELL": 0,
+      "HOLD": 14892
+    },
+    {
+      "threshold_log_return": 0.0005,
+      "BUY": 0,
+      "SELL": 0,
+      "HOLD": 14892
+    }
+  ],
+  "trades_executed": false,
+  "costs_estimated": false,
+  "test_dataset_used": false
+}

@@ -1,0 +1,79 @@
+{
+  "project": "AURUM-AI",
+  "stage": "B.17.6",
+  "dataset": "XOM",
+  "evaluation_split": "validation",
+  "strategy": "CNN1D UP and Logistic UP and Close > SMA5 > EMA10",
+  "common_signals": 132,
+  "entry_delay_minutes": 10,
+  "exit_offsets_from_signal_minutes": {
+    "30m": 35,
+    "60m": 65
+  },
+  "actual_holding_minutes": {
+    "30m": 25,
+    "60m": 55
+  },
+  "cost_bps_per_side": 10.0,
+  "execution_engine": "Historical Multi-Agent V2",
+  "risk_engine": "Risk Agent + Kill Switch",
+  "results": {
+    "30m": {
+      "model": "Consensus + Trend 30m",
+      "initial_capital_usd": 10000.0,
+      "final_equity_usd": 9915.439207008083,
+      "net_profit_usd": -84.56079299191617,
+      "net_return_pct": -0.8456079299191677,
+      "completed_trades": 94,
+      "win_rate_pct": 21.27659574468085,
+      "scheduled_exits": 94,
+      "early_down_exits": 0,
+      "blocked_orders": 0,
+      "skipped_after_exit": 0,
+      "observed_5min_bars": 24193,
+      "max_observed_drawdown_pct": 0.871673400047649,
+      "total_fees_usd": 93.53762196406518,
+      "final_system_state": "ACTIVE",
+      "halt_timestamp_ms": null,
+      "halt_timestamp_utc": null,
+      "kill_switch_transitions": []
+    },
+    "60m": {
+      "model": "Consensus + Trend 60m",
+      "initial_capital_usd": 10000.0,
+      "final_equity_usd": 9930.648655146328,
+      "net_profit_usd": -69.35134485367502,
+      "net_return_pct": -0.69351344853672,
+      "completed_trades": 90,
+      "win_rate_pct": 30.0,
+      "scheduled_exits": 90,
+      "early_down_exits": 0,
+      "blocked_orders": 0,
+      "skipped_after_exit": 0,
+      "observed_5min_bars": 24193,
+      "max_observed_drawdown_pct": 0.7691301771229058,
+      "total_fees_usd": 89.623295182374,
+      "final_system_state": "ACTIVE",
+      "halt_timestamp_ms": null,
+      "halt_timestamp_utc": null,
+      "kill_switch_transitions": []
+    }
+  },
+  "return_difference_60m_minus_30m_pp": 0.15209448138244763,
+  "previous_experiments_preserved": true,
+  "test_dataset_used": false,
+  "real_trading": false,
+  "genuine_walk_forward": false,
+  "limitations": [
+    "Exploratory validation experiment.",
+    "30m classification models reused for 60m exits.",
+    "Common cohort selected using historical future-bar availability.",
+    "Cohort eligibility is not an ex-ante tradable rule.",
+    "Model and strategies previously explored on validation.",
+    "Not independent out-of-sample evidence.",
+    "Trading fees are hypothetical.",
+    "Bid-only historical data.",
+    "Idealized delayed candle-open execution.",
+    "No intrabar execution or slippage modeling."
+  ]
+}

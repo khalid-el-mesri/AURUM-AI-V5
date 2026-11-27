@@ -1,0 +1,57 @@
+{
+  "project": "AURUM-AI",
+  "task": "30m classification",
+  "evaluation_split": "validation",
+  "train_samples": 61937,
+  "validation_samples": 13337,
+  "models": {
+    "majority": {
+      "accuracy": 0.3493289345430007,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.17259390975772393
+    },
+    "logistic_regression": {
+      "accuracy": 0.36207542925695435,
+      "balanced_accuracy": 0.36907067588543324,
+      "macro_f1": 0.3604337071991008
+    },
+    "cnn1d": {
+      "accuracy": 0.3757216765389518,
+      "balanced_accuracy": 0.37597102147312506,
+      "macro_f1": 0.3749043427242957
+    }
+  },
+  "cnn_minus_logistic": {
+    "accuracy": 0.013646247281997426,
+    "balanced_accuracy": 0.006900345587691814,
+    "macro_f1": 0.014470635525194897
+  },
+  "logistic_confusion_matrix": [
+    [
+      1573,
+      1759,
+      1327
+    ],
+    [
+      1081,
+      1902,
+      940
+    ],
+    [
+      1481,
+      1920,
+      1354
+    ]
+  ],
+  "logistic_hyperparameters": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 700
+  },
+  "test_dataset_used": false,
+  "limitations": [
+    "CNN1D was selected using validation.",
+    "Comparisons are exploratory.",
+    "Overlapping 30m targets are dependent."
+  ]
+}

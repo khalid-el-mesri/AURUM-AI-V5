@@ -1,0 +1,31 @@
+{
+  "project": "AURUM-AI",
+  "model": "CNN1D",
+  "baseline": "Zero Return",
+  "evaluation_split": "validation",
+  "method": "Moving Block Bootstrap",
+  "block_size": 10,
+  "n_bootstrap": 3000,
+  "seed": 42,
+  "confidence_level": 95,
+  "trading_days": 311,
+  "total_windows": 14892,
+  "observed_absolute_improvement": 5.1505277425846485e-09,
+  "observed_improvement_pct": 0.0007111834819403523,
+  "absolute_improvement_ci": [
+    -1.289111650227306e-07,
+    2.1195142895415883e-07
+  ],
+  "percentage_improvement_ci": [
+    -0.017877624685110477,
+    0.028063841834588252
+  ],
+  "ci_includes_zero": true,
+  "test_dataset_used": false,
+  "limitations": [
+    "The model was already selected using validation.",
+    "Bootstrap results are exploratory.",
+    "Temporal market regimes may change.",
+    "No trading profitability is evaluated."
+  ]
+}

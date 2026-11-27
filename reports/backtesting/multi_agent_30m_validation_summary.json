@@ -1,0 +1,68 @@
+{
+  "project": "AURUM-AI",
+  "stage": "Historical Multi-Agent Simulation",
+  "evaluation_split": "validation",
+  "original_signals": 13337,
+  "valid_signals": 13026,
+  "excluded_signals": 311,
+  "initial_capital_usd": 10000.0,
+  "cost_bps_per_side": 10.0,
+  "results": {
+    "cnn1d": {
+      "model": "CNN1D",
+      "initial_capital_usd": 10000.0,
+      "final_equity_usd": 9046.567443645965,
+      "net_profit_usd": -953.432556354079,
+      "net_return_pct": -9.534325563540346,
+      "completed_trades": 1030,
+      "win_rate_pct": 14.077669902912621,
+      "max_observed_drawdown_pct": 9.543289228393203,
+      "total_fees_usd": 978.84485277842,
+      "scheduled_exits": 828,
+      "early_down_exits": 202,
+      "risk_blocked_orders": 0,
+      "signals_skipped_after_exit": 760,
+      "decisions_logged": 13094,
+      "executed_transactions": 2060
+    },
+    "logistic_regression": {
+      "model": "Logistic Regression",
+      "initial_capital_usd": 10000.0,
+      "final_equity_usd": 8999.130014718061,
+      "net_profit_usd": -1000.8699852819898,
+      "net_return_pct": -10.008699852819392,
+      "completed_trades": 1016,
+      "win_rate_pct": 8.858267716535433,
+      "max_observed_drawdown_pct": 10.00869985281939,
+      "total_fees_usd": 962.8970009017559,
+      "scheduled_exits": 372,
+      "early_down_exits": 644,
+      "risk_blocked_orders": 986,
+      "signals_skipped_after_exit": 308,
+      "decisions_logged": 13090,
+      "executed_transactions": 2032
+    }
+  },
+  "execution_assumptions": {
+    "entry": "Signal timestamp + 10 minutes, Bid open",
+    "exit": "Signal timestamp + 35 minutes, Bid open",
+    "early_exit": "DOWN forecast when holdings exist",
+    "same_session_required": true,
+    "fractional_shares": true
+  },
+  "real_trading": false,
+  "genuine_walk_forward": false,
+  "test_dataset_used": false,
+  "limitations": [
+    "Models and horizon selected on validation.",
+    "Bid-only OHLC; real spread unavailable.",
+    "Hypothetical 10 bps per-side costs.",
+    "Idealized candle-open fills.",
+    "No intrabar stop-loss.",
+    "Drawdown sampled at available bar opens.",
+    "Validation-only model comparison.",
+    "Retrospective filtering of missing candles.",
+    "Historical event and runtime audit times differ.",
+    "Not an independent out-of-sample result."
+  ]
+}

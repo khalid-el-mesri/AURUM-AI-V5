@@ -1,0 +1,70 @@
+{
+  "model": "LSTM",
+  "device": "cpu",
+  "evaluation_split": "validation",
+  "target": "next_5min_log_return",
+  "window_size": 20,
+  "feature_names": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "hidden_size": 32,
+  "target_scale": 1000.0,
+  "best_epoch": 4,
+  "validation_metrics": {
+    "MAE": 0.0007243843273550791,
+    "RMSE": 0.0009727090143427105
+  },
+  "zero_return_validation": {
+    "MAE": 0.0007242192589361388,
+    "RMSE": 0.0009727177482458079
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5304231967954214,
+      "validation_mae": 0.0007245443620707055,
+      "validation_rmse": 0.0009730511899437242
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5301596311970012,
+      "validation_mae": 0.0007244836518610178,
+      "validation_rmse": 0.0009726651532754267
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.53013544972477,
+      "validation_mae": 0.0007247833987680278,
+      "validation_rmse": 0.000972950545157478
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5301277577986455,
+      "validation_mae": 0.0007243843273550791,
+      "validation_rmse": 0.0009727090143427105
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5300230894157045,
+      "validation_mae": 0.0007247277818253438,
+      "validation_rmse": 0.0009727801195898388
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5299215810911998,
+      "validation_mae": 0.0007245400237050613,
+      "validation_rmse": 0.0009726842077590726
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5298823565264058,
+      "validation_mae": 0.0007245610224108728,
+      "validation_rmse": 0.0009727990661983712
+    }
+  ]
+}

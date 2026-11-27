@@ -1,0 +1,15 @@
+{
+  "model": "Ridge Regression",
+  "alpha": 100.0,
+  "evaluation_split": "validation",
+  "target": "next_5min_log_return",
+  "features_per_sample": 120,
+  "ridge": {
+    "MAE": 0.0007259496487677097,
+    "RMSE": 0.0009743490372784436
+  },
+  "zero_return": {
+    "MAE": 0.0007242192514240742,
+    "RMSE": 0.0009727177093736827
+  }
+}

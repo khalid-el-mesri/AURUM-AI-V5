@@ -1,0 +1,84 @@
+{
+  "model": "Transformer",
+  "evaluation_split": "validation",
+  "target": "next_5min_log_return",
+  "device": "cpu",
+  "d_model": 24,
+  "n_heads": 4,
+  "n_layers": 1,
+  "window_size": 20,
+  "feature_names": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "target_scale": 1000.0,
+  "best_epoch": 6,
+  "validation_metrics": {
+    "MAE": 0.000724395483294491,
+    "RMSE": 0.000972904707693219
+  },
+  "zero_return_validation": {
+    "MAE": 0.0007242192589361388,
+    "RMSE": 0.0009727177482458079
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5330447094042998,
+      "validation_mae": 0.0007271703367639224,
+      "validation_rmse": 0.0009739754486103627
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.531027160667523,
+      "validation_mae": 0.0007260996399135616,
+      "validation_rmse": 0.0009734298784346728
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5307734096057327,
+      "validation_mae": 0.00072461029134349,
+      "validation_rmse": 0.0009726996943232565
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5306668243519923,
+      "validation_mae": 0.0007246643907438427,
+      "validation_rmse": 0.0009734331631237719
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5303942063396065,
+      "validation_mae": 0.0007246621511211801,
+      "validation_rmse": 0.0009730250258242631
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5303711893039466,
+      "validation_mae": 0.000724395483294491,
+      "validation_rmse": 0.000972904707693219
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5303506084297034,
+      "validation_mae": 0.0007246289528423433,
+      "validation_rmse": 0.0009727060471669837
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5300731613947983,
+      "validation_mae": 0.0007253100153386283,
+      "validation_rmse": 0.0009729118002285713
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.530216074186118,
+      "validation_mae": 0.0007250619548832505,
+      "validation_rmse": 0.0009730956270129533
+    }
+  ]
+}

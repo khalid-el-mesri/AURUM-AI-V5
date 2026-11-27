@@ -1,0 +1,21 @@
+{
+  "model": "CNN1D",
+  "baseline": "Zero Return",
+  "evaluation_split": "validation",
+  "total_windows": 14892,
+  "trading_days": 311,
+  "cnn_better_days": 163,
+  "zero_better_days": 148,
+  "equal_days": 0,
+  "cnn_metrics": {
+    "MAE": 0.0007242141084083963,
+    "RMSE": 0.00097256482192018
+  },
+  "zero_metrics": {
+    "MAE": 0.0007242192589361388,
+    "RMSE": 0.0009727177482458079
+  },
+  "overall_mae_improvement_pct": 0.0007111834819253818,
+  "note": "Exploratory validation diagnostic, not an independent significance test.",
+  "test_dataset_used": false
+}

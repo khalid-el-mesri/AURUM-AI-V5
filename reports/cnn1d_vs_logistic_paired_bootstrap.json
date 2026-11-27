@@ -1,0 +1,37 @@
+{
+  "project": "AURUM-AI",
+  "comparison": "CNN1D vs Logistic Regression",
+  "evaluation": "validation",
+  "trading_days": 311,
+  "windows": 13337,
+  "block_days": 10,
+  "repetitions": 3000,
+  "cnn1d_metrics": {
+    "accuracy": 0.3757216765389518,
+    "balanced_accuracy": 0.37597102147312506,
+    "macro_f1": 0.3749043427242957
+  },
+  "logistic_metrics": {
+    "accuracy": 0.36207542925695435,
+    "balanced_accuracy": 0.36907067588543324,
+    "macro_f1": 0.3604337071991008
+  },
+  "accuracy_difference_pp": 1.3646247281997426,
+  "accuracy_ci_95_pp": [
+    -0.1944347156023908,
+    2.4753034947842765
+  ],
+  "macro_f1_difference": 0.014470635525194897,
+  "macro_f1_ci_95": [
+    -0.0013567261070191025,
+    0.026927740277188167
+  ],
+  "test_dataset_used": false,
+  "limitations": [
+    "Exploratory validation comparison.",
+    "Models were selected using validation.",
+    "Overlapping targets create dependence.",
+    "Interval does not correct for model selection.",
+    "No financial profitability measured."
+  ]
+}

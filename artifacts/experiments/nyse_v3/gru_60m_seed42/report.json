@@ -1,0 +1,90 @@
+{
+  "model": "GRU",
+  "horizon_minutes": 60,
+  "run_id": "gru_60m_seed42",
+  "train_samples": 53215,
+  "validation_samples": 11471,
+  "window_shape": [
+    20,
+    6
+  ],
+  "features": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "zero_return_validation": {
+    "MAE": 0.0023139271550250253,
+    "RMSE": 0.0030764856940404366
+  },
+  "test_dataset_used": false,
+  "status": "COMPLETED",
+  "best_epoch": 2,
+  "validation_metrics_selected_on_validation": {
+    "MAE": 0.002313133847050585,
+    "RMSE": 0.0030739738306568586
+  },
+  "selection_metric": "minimum validation MAE across epochs",
+  "evaluation_note": "Validation selected epoch; not an unbiased final Test estimate.",
+  "mae_improvement_vs_zero_pct": 0.03428405136772233,
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss_scaled": 2.4194812629900064,
+      "validation_MAE": 0.0023146260755885066,
+      "validation_RMSE": 0.0030754196797140535
+    },
+    {
+      "epoch": 2,
+      "train_loss_scaled": 2.4186366436614315,
+      "validation_MAE": 0.002313133847050585,
+      "validation_RMSE": 0.0030739738306568586
+    },
+    {
+      "epoch": 3,
+      "train_loss_scaled": 2.417977666648765,
+      "validation_MAE": 0.0023147015627164244,
+      "validation_RMSE": 0.0030756309841647894
+    },
+    {
+      "epoch": 4,
+      "train_loss_scaled": 2.4170194520478097,
+      "validation_MAE": 0.002313282998082407,
+      "validation_RMSE": 0.0030748285025780668
+    },
+    {
+      "epoch": 5,
+      "train_loss_scaled": 2.4157627908670287,
+      "validation_MAE": 0.002314487566666039,
+      "validation_RMSE": 0.0030765596467919056
+    }
+  ],
+  "hyperparameters": {
+    "batch_size": 256,
+    "max_epochs": 10,
+    "patience": 3,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "target_scale": 1000.0,
+    "hidden_or_conv_channels": 32,
+    "seed": 42,
+    "gradient_clip_norm": 1.0,
+    "loss": "SmoothL1Loss"
+  },
+  "dataset": {
+    "name": "NYSE V3",
+    "normalization": "Train 5m z-score, reused across horizons",
+    "train_npz_sha256": "2778e85338a2409c1b1971ac6639f7401182cacbe4d4f639ed0445be2b6ab792",
+    "validation_npz_sha256": "66962d1c204e9dc6435cc411e6dae7c15b3b6bb0938da3123c189021fbbe0226",
+    "normalization_stats_sha256": "f30cef090f9753fada696d0899adca5993ebccf2d04d728f0b8e62f80d91a8da"
+  },
+  "framework": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.4.6",
+    "device": "cpu"
+  },
+  "completed_at_utc": "2026-10-16T13:03:10.804932+00:00"
+}

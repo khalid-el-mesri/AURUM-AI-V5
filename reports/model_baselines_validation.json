@@ -1,0 +1,21 @@
+{
+  "evaluation_split": "validation",
+  "target": "next_5min_log_return",
+  "train_samples": 69187,
+  "validation_samples": 14892,
+  "metrics": {
+    "Zero Return": {
+      "MAE": 0.0007242192589361388,
+      "RMSE": 0.0009727177482458079
+    },
+    "Historical Mean": {
+      "MAE": 0.0007245261222026892,
+      "RMSE": 0.000972721843781319
+    },
+    "Last Return": {
+      "MAE": 0.0010287740850566174,
+      "RMSE": 0.0013751755181751041
+    }
+  },
+  "best_baseline_by_mae": "Zero Return"
+}

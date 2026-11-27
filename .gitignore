@@ -1,0 +1,93 @@
+# ==========================================
+# AURUM-AI - Git Ignore Configuration
+# ==========================================
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# VS Code local settings
+.vscode/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Raw and processed datasets
+data/01_raw/*
+data/02_clean/*
+data/03_features/*
+data/04_windows/*
+data/05_model_data/*
+
+# Preserve directory structure
+!data/01_raw/.gitkeep
+!data/02_clean/.gitkeep
+!data/03_features/.gitkeep
+!data/04_windows/.gitkeep
+!data/05_model_data/.gitkeep
+
+# Trained model files
+*.pt
+*.pth
+*.ckpt
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Operating system
+.DS_Store
+Thumbs.db
+# Streamlit authentication secrets
+.streamlit/secrets.toml
+
+# === AURUM-AI V5 : PUBLICATION GITHUB ===
+
+# Windows application builds
+/build/
+/dist/
+/build_pdf_candidate/
+/dist_pdf_candidate/
+/dist_installer_pdf_candidate/
+
+# Python packaging output
+*.egg-info/
+*.whl
+
+# Compiled installers and applications
+*.exe
+*.msi
+
+# Local archives and backups
+*.zip
+*.bak
+
+# Private keys and certificates
+*.key
+*.p12
+*.pfx
+*.pem
+
+# Local credentials
+credentials.json
+service-account.json
+*secrets*.json
+

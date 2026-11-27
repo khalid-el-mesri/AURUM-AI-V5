@@ -1,0 +1,47 @@
+{
+  "project": "AURUM-AI",
+  "forecast_model": "CNN1D",
+  "agent": "StrategyAgent",
+  "evaluation_split": "validation",
+  "total_windows": 14892,
+  "threshold_log_return": 0.0003,
+  "decision_counts": {
+    "BUY": 0,
+    "SELL": 0,
+    "HOLD": 14892
+  },
+  "example_decisions": [
+    {
+      "action": "HOLD",
+      "predicted_return": -2.863958252419252e-05,
+      "threshold": 0.0003,
+      "reason": "Forecast magnitude is too small."
+    },
+    {
+      "action": "HOLD",
+      "predicted_return": -2.396979289187584e-05,
+      "threshold": 0.0003,
+      "reason": "Forecast magnitude is too small."
+    },
+    {
+      "action": "HOLD",
+      "predicted_return": -1.9367509594303556e-05,
+      "threshold": 0.0003,
+      "reason": "Forecast magnitude is too small."
+    },
+    {
+      "action": "HOLD",
+      "predicted_return": -7.86033797339769e-06,
+      "threshold": 0.0003,
+      "reason": "Forecast magnitude is too small."
+    },
+    {
+      "action": "HOLD",
+      "predicted_return": -5.01719250678434e-06,
+      "threshold": 0.0003,
+      "reason": "Forecast magnitude is too small."
+    }
+  ],
+  "orders_executed": false,
+  "test_dataset_used": false
+}

@@ -1,0 +1,14 @@
+{
+  "project": "AURUM-AI",
+  "model": "CNN1D",
+  "split": "validation",
+  "total_windows": 14892,
+  "nonzero_return_windows": 14580,
+  "directional_accuracy_pct": 50.55555555555556,
+  "majority_baseline_accuracy_pct": 50.80246913580246,
+  "pearson_correlation": 0.0214742340956515,
+  "top_10pct_prediction_magnitude_accuracy_pct": 51.052274270196875,
+  "top_10pct_nonzero_samples": 1473,
+  "test_dataset_used": false,
+  "trades_executed": false
+}

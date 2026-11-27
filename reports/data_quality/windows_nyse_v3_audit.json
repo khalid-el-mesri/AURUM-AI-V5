@@ -1,0 +1,159 @@
+{
+  "dataset": "AURUM-AI XOM V3 NYSE",
+  "source_path": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\03_features\\xom_features_nyse_v3.parquet",
+  "source_sha256": "aef7c58cd1c26538a41155d0f848f408beb8fb45813048bd2e3d2c6831f0a162",
+  "feature_names": [
+    "return_1",
+    "range_pct",
+    "body_pct",
+    "log_return_1",
+    "volatility_10",
+    "sma_5_distance"
+  ],
+  "window_size_bars": 20,
+  "feature_availability": "candle open + 5 minutes",
+  "target_definition": "ln(close_at_target_bar / close_at_last_input_bar)",
+  "split_policy": "chronological by observed NYSE session; 70% Train, 15% Validation; held-out remainder reserved, never windowed",
+  "splits": {
+    "train": {
+      "observed_sessions": 1450,
+      "first": "2017-01-26",
+      "last": "2022-11-29"
+    },
+    "validation": {
+      "observed_sessions": 311,
+      "first": "2022-11-30",
+      "last": "2024-11-14"
+    }
+  },
+  "reserved_test_session_count": 311,
+  "test_npz_opened": false,
+  "test_windows_built": false,
+  "horizons": {
+    "5": {
+      "train": {
+        "windows": 69165,
+        "shape": [
+          69165,
+          20,
+          6
+        ],
+        "min_signal_timestamp_ms": 1485449700000,
+        "max_signal_timestamp_ms": 1669755000000,
+        "normalized_output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\nyse_v3\\train_normalized.npz"
+      },
+      "validation": {
+        "windows": 14892,
+        "shape": [
+          14892,
+          20,
+          6
+        ],
+        "min_signal_timestamp_ms": 1669827300000,
+        "max_signal_timestamp_ms": 1731617400000,
+        "normalized_output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\nyse_v3\\validation_normalized.npz"
+      }
+    },
+    "15": {
+      "train": {
+        "windows": 66265,
+        "shape": [
+          66265,
+          20,
+          6
+        ],
+        "min_signal_timestamp_ms": 1485449700000,
+        "max_signal_timestamp_ms": 1669754400000,
+        "normalized_output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\nyse_v3\\train_15m_normalized.npz"
+      },
+      "validation": {
+        "windows": 14270,
+        "shape": [
+          14270,
+          20,
+          6
+        ],
+        "min_signal_timestamp_ms": 1669827300000,
+        "max_signal_timestamp_ms": 1731616800000,
+        "normalized_output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\nyse_v3\\validation_15m_normalized.npz"
+      }
+    },
+    "30": {
+      "train": {
+        "windows": 61915,
+        "shape": [
+          61915,
+          20,
+          6
+        ],
+        "min_signal_timestamp_ms": 1485449700000,
+        "max_signal_timestamp_ms": 1669753500000,
+        "normalized_output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\nyse_v3\\train_30m_normalized.npz"
+      },
+      "validation": {
+        "windows": 13337,
+        "shape": [
+          13337,
+          20,
+          6
+        ],
+        "min_signal_timestamp_ms": 1669827300000,
+        "max_signal_timestamp_ms": 1731615900000,
+        "normalized_output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\nyse_v3\\validation_30m_normalized.npz"
+      }
+    },
+    "60": {
+      "train": {
+        "windows": 53215,
+        "shape": [
+          53215,
+          20,
+          6
+        ],
+        "min_signal_timestamp_ms": 1485449700000,
+        "max_signal_timestamp_ms": 1669751700000,
+        "normalized_output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\nyse_v3\\train_60m_normalized.npz"
+      },
+      "validation": {
+        "windows": 11471,
+        "shape": [
+          11471,
+          20,
+          6
+        ],
+        "min_signal_timestamp_ms": 1669827300000,
+        "max_signal_timestamp_ms": 1731614100000,
+        "normalized_output": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\05_model_data\\nyse_v3\\validation_60m_normalized.npz"
+      }
+    }
+  },
+  "scaler": {
+    "method": "z-score",
+    "fitted_on": "train 5m windows only",
+    "mean": [
+      -6.877202547157625e-06,
+      0.0017259261860396802,
+      -6.658371959598247e-06,
+      -7.881494081791755e-06,
+      0.001113368629957942,
+      -1.5116080263020951e-05
+    ],
+    "std": [
+      0.001417271101160104,
+      0.0014968056416660152,
+      0.0014135218800226197,
+      0.0014172066349399136,
+      0.0008679521675049392,
+      0.001549231526286508
+    ],
+    "original_std": [
+      0.001417271101160104,
+      0.0014968056416660152,
+      0.0014135218800226197,
+      0.0014172066349399136,
+      0.0008679521675049392,
+      0.001549231526286508
+    ]
+  },
+  "mode": "WRITE NEW VERSION"
+}

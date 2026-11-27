@@ -1,0 +1,18 @@
+{
+  "source_csv": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\02_clean\\xom_regular_session_nyse_v3.csv",
+  "output_parquet": "C:\\Users\\Pc\\Desktop\\projet de deep learning\\AURUM-AI\\data\\02_clean\\xom_segmented_nyse_v3.parquet",
+  "input_rows": 161001,
+  "segmented_rows": 161001,
+  "session_dates": 2072,
+  "segments": 2072,
+  "intraday_interruptions": 0,
+  "first_timestamp_ms": 1485441000000,
+  "last_timestamp_ms": 1790798100000,
+  "five_minute_bar_ms": 300000,
+  "calendar_rule": "whole [open,open+5min) candle within official NYSE session",
+  "timestamp_semantics": "timestamp = candle OPEN in UTC milliseconds; OHLC available after OPEN+5min",
+  "features_regenerated": false,
+  "model_training_performed": false,
+  "test_split_npz_opened": false,
+  "source_csv_modified": false
+}

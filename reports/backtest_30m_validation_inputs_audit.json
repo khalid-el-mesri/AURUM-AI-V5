@@ -1,0 +1,24 @@
+{
+  "project": "AURUM-AI",
+  "stage": "Backtest input preparation",
+  "evaluation_split": "validation",
+  "windows": 13337,
+  "trading_days": 311,
+  "cnn_validation_accuracy": 0.3757216765389518,
+  "logistic_validation_accuracy": 0.36207542925695435,
+  "price_source": "Dukascopy XOMUSUSD Bid OHLC",
+  "entry_rule": "Next 5m candle Bid open",
+  "reference_exit_rule": "30m target candle Bid close",
+  "execution_status": "NOT EXECUTED",
+  "scores_calibrated": false,
+  "real_spread_available": false,
+  "test_dataset_used": false,
+  "limitations": [
+    "Validation used during model selection.",
+    "Bid-only quotes, no observed Ask or spread.",
+    "Next-open fill assumes ideal execution timing.",
+    "Scores are not calibrated probabilities.",
+    "No actual trade has been simulated yet.",
+    "Not yet a genuine walk-forward evaluation."
+  ]
+}
