@@ -7,6 +7,7 @@ activity; passive fragment reruns are never treated as user activity.
 
 from __future__ import annotations
 
+import os
 import time
 from pathlib import Path
 
@@ -20,6 +21,19 @@ _COMPONENT_DIRECTORY = Path(__file__).resolve().parent / "idle_component"
 _browser_idle = components.declare_component(
     "aurum_idle_activity_v1", path=str(_COMPONENT_DIRECTORY)
 )
+
+
+
+def _is_academic_review_session() -> bool:
+    """Recognize opt-in, ephemeral local review (not a verified account)."""
+    user = st.session_state.get("aurum_local_user")
+    return (
+        os.getenv("AURUM_EVALUATION_MODE") == "1"
+        and isinstance(user, dict)
+        and user.get("id") == 0
+        and user.get("mode") == "academic_review"
+        and user.get("email") == "evaluation@localhost.invalid"
+    )
 
 
 def start_local_session(user: dict) -> None:
@@ -117,7 +131,12 @@ def session_expired(now: float | None = None) -> bool:
 def check_local_session() -> bool:
     """Never allow a locked session to access protected pages."""
     if session_expired():
-        lock_local_session()
+        if _is_academic_review_session():
+            # Guest sessions return to the one-click entry on timeout.
+            # Never demand a non-existent guest password.
+            end_local_session()
+        else:
+            lock_local_session()
     return (
         st.session_state.get("aurum_local_user") is not None
         and not st.session_state.get("aurum_session_locked", False)
@@ -155,7 +174,10 @@ def render_idle_watchdog() -> None:
                     st.rerun()
                 st.session_state["aurum_last_activity_at"] = time.monotonic()
             elif event.get("type") == "idle":
-                lock_local_session()
+                if _is_academic_review_session():
+                    end_local_session()
+                else:
+                    lock_local_session()
                 st.rerun()
             elif event.get("type") == "observer_error":
                 st.warning(

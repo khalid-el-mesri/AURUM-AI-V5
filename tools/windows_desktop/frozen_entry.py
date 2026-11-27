@@ -156,6 +156,10 @@ def launch() -> int:
 def main(argv: list[str] | None = None) -> int:
     multiprocessing.freeze_support()
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv == ['--review']:
+        # Explicit local reviewer shortcut; inherited by the child server.
+        os.environ['AURUM_EVALUATION_MODE'] = '1'
+        argv = []
     if len(argv) == 2 and argv[0] == '--streamlit-server':
         return serve(int(argv[1]))
     if argv:

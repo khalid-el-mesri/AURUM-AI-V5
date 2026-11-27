@@ -16,6 +16,7 @@ Google OAuth is not yet implemented. Automatic inactivity lock is enabled.
 from __future__ import annotations
 
 import base64
+import os
 import sys
 from pathlib import Path
 
@@ -458,6 +459,32 @@ with right:
             st.rerun()
 
     else:
+
+        # Deliberately opt-in local academic review. Normal login and OTP
+        # remain unchanged when AURUM_EVALUATION_MODE is not explicitly set.
+        if (os.getenv("AURUM_EVALUATION_MODE") == "1"
+                and st.session_state.get("aurum_v5_mode", False)):
+            st.info(
+                "Mode évaluation académique : accès aux résultats historiques "
+                "embarqués, sans inscription ni OTP. Aucune transaction réelle."
+            )
+            if st.button(
+                "🎓 Consulter AURUM-AI V5 (évaluation professeur)",
+                key="aurum_professor_review_access",
+                type="primary",
+                width="stretch",
+            ):
+                # Ephemeral in-memory profile: no SQLite account or password.
+                start_local_session({
+                    "id": 0,
+                    "display_name": "Évaluation professeur",
+                    "email": "evaluation@localhost.invalid",
+                    "email_verified": False,
+                    "created_at": 0,
+                    "mode": "academic_review",
+                })
+                st.rerun()
+            st.divider()
 
         mode = st.segmented_control(
             "Authentification",

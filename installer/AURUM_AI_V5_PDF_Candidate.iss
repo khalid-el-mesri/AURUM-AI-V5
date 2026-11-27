@@ -37,6 +37,8 @@ Source: "..\dist_pdf_candidate\AURUM-AI V5\*"; DestDir: "{app}"; Excludes: "*.sq
 
 [Icons]
 Name: "{autoprograms}\AURUM-AI V5 PDF Candidate"; Filename: "{app}\{#ApplicationExe}"; WorkingDir: "{app}"; IconFilename: "{app}\{#ApplicationExe}"
+Name: "{autoprograms}\AURUM-AI V5 - Evaluation professeur"; Filename: "{app}\{#ApplicationExe}"; Parameters: "--review"; WorkingDir: "{app}"; IconFilename: "{app}\{#ApplicationExe}"
+Name: "{autodesktop}\AURUM-AI V5 - Evaluation professeur"; Filename: "{app}\{#ApplicationExe}"; Parameters: "--review"; WorkingDir: "{app}"; IconFilename: "{app}\{#ApplicationExe}"
 Name: "{autodesktop}\AURUM-AI V5 PDF Candidate"; Filename: "{app}\{#ApplicationExe}"; WorkingDir: "{app}"; IconFilename: "{app}\{#ApplicationExe}"; Tasks: desktopicon
 
 [Run]
